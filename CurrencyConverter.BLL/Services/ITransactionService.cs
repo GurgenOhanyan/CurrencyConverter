@@ -5,13 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CurrencyConverter.DAL.Repositories
+namespace CurrencyConverter.BLL.Services
 {
-   
-    public interface ITransactionRepository
+    public interface ITransactionService
     {
         Task<List<TransactionDetails>> GetAllTransactions();
         Task<TransactionDetails> GetTransactionById(int id);
-        Task<bool> CreateTransaction(TransactionDetails transactionDetails); 
+        Task<bool> CreateTransaction(TransactionDetails transactionDetails);
     }
 }

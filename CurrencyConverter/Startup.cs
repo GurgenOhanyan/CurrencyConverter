@@ -1,3 +1,7 @@
+using CurrencyConverter.BLL.Services;
+using CurrencyConverter.DAL;
+using CurrencyConverter.DAL.Repositories;
+using CurrencyConverter.Factory;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,13 +29,20 @@ namespace CurrencyConverter
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
+        { 
 
             services.AddControllers();
+            services.AddLogging();
+            services.AddTransient<ITransactionFactory, TransactionFactory>();
+            services.AddTransient<ITransactionService, TransactionService>();
+            services.AddTransient<ITransactionRepository, TransactionRepository>();
+            services.AddDbContext<ConverterDbContext>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "CurrencyConverter", Version = "v1" });
             });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

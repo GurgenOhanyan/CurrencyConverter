@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConverter", "CurrencyConverter\CurrencyConverter.csproj", "{3A3C3F19-ECE6-4866-BDC6-B581A4589A3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyConverter", "CurrencyConverter\CurrencyConverter.csproj", "{3A3C3F19-ECE6-4866-BDC6-B581A4589A3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConverter.DAL", "CurrencyConverter.DAL\CurrencyConverter.DAL.csproj", "{9F224D92-E8C2-4B02-9B85-3095EE3E0AE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyConverter.DAL", "CurrencyConverter.DAL\CurrencyConverter.DAL.csproj", "{9F224D92-E8C2-4B02-9B85-3095EE3E0AE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConverter.BLL", "CurrencyConverter.BLL\CurrencyConverter.BLL.csproj", "{AB96D689-5E34-4E42-B488-8BA01DB49382}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{9F224D92-E8C2-4B02-9B85-3095EE3E0AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F224D92-E8C2-4B02-9B85-3095EE3E0AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F224D92-E8C2-4B02-9B85-3095EE3E0AE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB96D689-5E34-4E42-B488-8BA01DB49382}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB96D689-5E34-4E42-B488-8BA01DB49382}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB96D689-5E34-4E42-B488-8BA01DB49382}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB96D689-5E34-4E42-B488-8BA01DB49382}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

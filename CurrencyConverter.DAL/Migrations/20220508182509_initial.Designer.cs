@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CurrencyConverter.DAL.Migrations
 {
     [DbContext(typeof(ConverterDbContext))]
-    [Migration("20220505185705_initial")]
+    [Migration("20220508182509_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,14 +31,11 @@ namespace CurrencyConverter.DAL.Migrations
                     b.Property<DateTime>("CretationDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("CurrencyName")
+                    b.Property<string>("CurrencyCode")
                         .HasMaxLength(3)
                         .HasColumnType("nvarchar(3)");
 
-                    b.Property<decimal>("CurrentExchangeRate")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("CurrnecyCode")
+                    b.Property<string>("CurrencyName")
                         .HasMaxLength(3)
                         .HasColumnType("nvarchar(3)");
 

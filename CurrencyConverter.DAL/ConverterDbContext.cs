@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
+using System;
 
 namespace CurrencyConverter.DAL
 {
@@ -22,7 +24,7 @@ namespace CurrencyConverter.DAL
 
             string connectionString = configBuilder.GetConnectionString("CurrencyConverterConnection");
 
-            optionsBuilder.UseSqlServer(connectionString);
+            optionsBuilder.UseSqlServer(connectionString).LogTo(Console.WriteLine,LogLevel.Information);
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
